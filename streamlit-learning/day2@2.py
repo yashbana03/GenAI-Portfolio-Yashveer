@@ -20,8 +20,15 @@ if file:
     st.write(df.describe())
 
 if file:
-    job = df["Last Name"].unique()
-    selected_city = st.selectbox("Filter by job type", job)
-    filtered_data = df[df["Last Name"] == selected_city]
+    job = df["Job Title"].unique()
+    selected_job = st.selectbox("Filter by job type", job)
+    filtered_data = df[df["Job Title"] == selected_job]
     st.dataframe(filtered_data)
+     
+
+if file:
+    job = df["Sex"].unique()
+    selected_job = st.selectbox("Filter by job type", job)
+    filtered_data = df[df["Sex"] == selected_job]
     
+    st.dataframe(filtered_data)
